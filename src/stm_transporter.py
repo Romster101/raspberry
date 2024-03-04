@@ -5,7 +5,7 @@ import roslib
 import serial 
 from std_msgs.msg import String
 
-port = "ttyACM0"
+port = "/dev/ttyACM0"
 mySerialPort = serial.Serial(port)
 
 def callback(data):
