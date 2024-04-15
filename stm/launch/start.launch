@@ -1,0 +1,6 @@
+<launch>
+<node pkg="stm_transmit" type="stm_transporter.py" name="transporter">
+</node>
+<node pkg="stm_transmit" type="stm_transmit.py" name="transmit">
+</node>
+</launch>
