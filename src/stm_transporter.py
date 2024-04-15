@@ -2,15 +2,15 @@
 
 import rospy
 import roslib
-import serial
+import serial 
 from std_msgs.msg import String
 
 port = "/dev/ttyACM0"
 mySerialPort = serial.Serial(port)
 
 def callback(data):
-print(data)
-mySerialPort.write(data.data.encode())
+    print(data)
+    mySerialPort.write(data.data.encode())
 
 rospy.init_node("stm_transporter")
 rospy.Subscriber("transporter_topic", String, callback)
